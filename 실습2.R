@@ -45,27 +45,60 @@ repeat{
     print(a)
   }
 }
-
 #실습문제5 - repeat
-z=c()
-y=c(1:6)
+x <- 1
+a <- 1
 repeat{
-
-  for(i in 2:6) {
-    if(i>6) {
-      break
-    }else{
-      z[1] = y[1]
-      z[i] = y[i]*z[i-1]
-      cat("factorial(", i-1, ") = ", "\n")
-    }
-    
-  }
+  if(a > 10) break
+  print(x)
+  x = x+1
+  a = a+1
+  #factorial(x)
 }
 
+#실습문제5 - repeat
+x <- 1
+repeat{
+  if(x > 15) break
+  cat("factorial(",x,")","=",factorial(x),"\n")
+  x = x+1
+}
 
+##실습문제6
+#a)
+result <- 1
+m <-c(1:10)
+for(i in m) {
+  result = result * i
+  print(result)
+}
+#b)
+result <- 1
+i<-1
+while(i < 10) {
+  result = result * i
+  i = i + 1
+  print(result)
+}
+#c)
+result<-1
+x <- 1
+repeat{
+  if(x > 10) break
+  result = result * x
+  x = x + 1
+  print(result)
+}
 
-
+##실습문제7
+height=seq(171,180,by=1)
+weight=seq(62,80,by=2)
+data1=c(weight+height)
+student_name=c("a","b","c","d","e","f","g","h","i","j")
+feature_name=c("height","weight")
+m1<-matrix(c(height,weight),ncol = 10)
+colnames(m1)<-student_name
+rownames(m1)<-feature_name
 
 
 
